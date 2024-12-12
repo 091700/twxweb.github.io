@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人学习使用</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #ff7eb3);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; 
+    transition: opacity 1s ease-in;
+  }
+
+  .login-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    opacity: 0; 
+    transform: translateY(-20px); 
+    transition: opacity 1s ease-in, transform 3s ease-in; 
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+  }
+
+  .input-group label {
+    display: block;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+
+  .input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .input-group input:focus {
+    outline: none;
+    border-color: #74b9ff;
+  }
+
+  .btn {
+    background: #ff7eb3;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width:100%;
+  }
+
+  .btn:hover {
+    background: #ff5a8a;
+  }
+
+  .forgot-password {
+    display: block;
+    margin-top: 1rem;
+    color: #74b9ff;
+    text-decoration: none;
+  }
+
+
+</style>
+</head>
+<body>
+<div class="login-container">
+  <div class="logo">
+    <img src="game-logo.png" alt="Game Logo">
+  </div>
+  <h2>Login to Your Account</h2>
+  <form action="index.html">
+    <div class="input-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" required>
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" required>
+    </div>
+    <button class="btn" type="submit">Login</button>
+  </form>
+  <a href="index.html" class="forgot-password">Forgot Password?</a >
+</div>
+
+<script>
+  window.onload = function() {
+    document.body.style.opacity = 1; 
+    document.querySelector('.login-container').style.opacity = 1; 
+    document.querySelector('.login-container').style.transform = 'translateY(0)'; 
+  };
+</script>
+
+</body>
+</html>
